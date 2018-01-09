@@ -15,15 +15,15 @@
 	%>
 
 	 upload succeed!!!<br/>
-	<%--uploader:${uploader }
+	uploader:${uploader }
 	file name : ${uploadFileName }
 	file type : ${uploadContentType }
-	file address : <p><%=basePath %> ${uploadFiles }  + ${uploadFileName }</p><br />--%>
+	file address : <p><%=basePath %> ${uploadFiles }  + ${uploadFileName }</p><br />
 
-	uploader : <s:property value=" + uploader"/><br />
+	<%-- uploader : <s:property value=" + uploader"/><br />
 	file name : <s:property value=" + uploadFileName"/><br />
 	file type : <s:property value=" + uploadContentType"/><br />
-	file address : <p><%=basePath %><s:property value="'uploadFiles/' + uploadFileName"/></p><br />
+	file address : <p><%=basePath %><s:property value="'uploadFiles/' + uploadFileName"/></p><br /> --%>
 
 </body>
 </html>
