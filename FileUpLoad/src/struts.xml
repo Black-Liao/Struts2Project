@@ -9,11 +9,11 @@
   	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 
     <package name="shiyanlou" extends="struts-default" namespace="/">
-        <!-- <action name="upload" class="shiyanlou.struts.UpLoadAction" method="execute">
+        <action name="upload" class="shiyanlou.struts.UpLoadAction" method="execute">
         	<param name="savePath">/uploadFiles</param>
         	<result name="success">/success.jsp</result>
         	<result name="error">/error.jsp</result>
-        </action> -->
+        </action>
         
         <action name="multiUpload" class="shiyanlou.struts.MultiUpLoadFile" method="execute">
         	<interceptor-ref name="fileUpload">
@@ -28,4 +28,16 @@
         </action>
         
     </package>
+    
+    <package name="shiyanlou.struts.download" extends="struts-default">
+    	<action name="download" class="shiyanlou.struts.DownloadAction" method="execute">
+    		<param name="downloadPath">/uploadMultiFiles</param>
+    		<result name="success" type="stream">
+    			<param name="inputName">targetFile</param>
+    			<param name="contentDisposition">attachment;filename=${filename}</param>
+    			<param name="buffSize">4096</param>
+    		</result>
+    	</action>
+    </package>
+    
 </struts>

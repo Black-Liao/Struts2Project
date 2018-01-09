@@ -27,15 +27,18 @@
 	
 	file name : <s:property value=" + uploadsFileName[0]"/><br />
 	file type : <s:property value=" + uploadsContentType[0]"/><br />
-	file address : <p><%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[0]"/></p><br />
+	file address : <%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[0]"/>
+						<a href="download.action?filename=<s:property value="+uploadsFileName[0]"/>">download</a><br />
 
 	file name : <s:property value=" + uploadsFileName[1]"/><br />
 	file type : <s:property value=" + uploadsContentType[1]"/><br />
-	file address : <p><%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[1]"/></p><br />
+	file address : <p><%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[1]"/>
+	<a href="download.action?filename=<s:property value="+uploadsFileName[1]"/>">download</a></p><br />
 	
 	file name : <s:property value=" + uploadsFileName[2]"/><br />
 	file type : <s:property value=" + uploadsContentType[2]"/><br />
-	file address : <p><%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[2]"/></p><br />
+	file address : <p><%=basePath %><s:property value="'uploadsFiles/' + uploadsFileName[2]"/>
+	<a href="download.action?filename=<s:property value="+uploadsFileName[2]"/>">download</a></p><br />
 
 </body>
 </html>
