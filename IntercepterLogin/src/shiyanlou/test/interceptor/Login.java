@@ -33,7 +33,7 @@ public class Login {
 	
 	public String execute()throws Exception{
 			
-		Map map = ActionContext.getContext().getSession();
+		Map<String, Object> map = ActionContext.getContext().getSession();
 		String code = (String) map.get("code");
 		
 		if (code != null) {
