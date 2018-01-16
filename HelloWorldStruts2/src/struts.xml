@@ -10,7 +10,7 @@
 
     <package name="shiyanlou" extends="struts-default">
         <action name="hello" class="shiyanlou.HelloWorldAction" method="excute">
-        	<result name="success">/HelloWorld.jsp</result>
+        	<result name="success">/index.html</result>
         	<result name="error">/error.jsp</result>
         </action>
     </package>
